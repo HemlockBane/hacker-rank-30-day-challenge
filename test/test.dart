@@ -1,8 +1,6 @@
-import 'package:DartProjects/dummy.dart';
+import 'package:DartProjects/hello_world.dart';
 import 'package:test/test.dart';
 
 void main() {
-  test('calculate', () {
-    expect(calculate(), 42);
-  });
+  test('calculate', () {});
 }

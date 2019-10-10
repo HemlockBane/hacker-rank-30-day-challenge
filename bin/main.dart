@@ -1,5 +1,5 @@
-import 'package:DartProjects/dummy.dart' as dummy;
+import 'package:DartProjects/hello_world.dart';
 
 main(List<String> arguments) {
-  print('Hello world: ${dummy.calculate()}!');
+ printHelloWorld();
 }

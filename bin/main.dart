@@ -1,5 +1,5 @@
-import 'package:DartProjects/hello_world.dart';
+import 'package:DartProjects/data_types.dart';
 
 main(List<String> arguments) {
- printHelloWorld();
+ printSumOfDataTypes();
 }

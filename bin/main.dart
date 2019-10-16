@@ -1,5 +1,5 @@
-import 'package:DartProjects/data_types.dart';
+import 'package:DartProjects/operators.dart';
 
 main(List<String> arguments) {
- printSumOfDataTypes();
+ calculateTotalCost();
 }

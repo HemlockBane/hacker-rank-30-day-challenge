@@ -1,5 +1,5 @@
-import 'package:DartProjects/operators.dart';
+import 'package:DartProjects/intro-to-conditional-statements.dart';
 
 main(List<String> arguments) {
- calculateTotalCost();
+ findOutIfNumberIsWeird();
 }

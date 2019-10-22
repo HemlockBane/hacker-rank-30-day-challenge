@@ -1,5 +1,5 @@
-import 'package:DartProjects/intro-to-conditional-statements.dart';
+import 'package:DartProjects/class_vs_instance.dart';
 
 main(List<String> arguments) {
- findOutIfNumberIsWeird();
+ tellMeWhetherIAmOld();
 }

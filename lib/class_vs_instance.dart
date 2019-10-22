@@ -1,49 +1,40 @@
 import 'dart:io';
 
-//Task
+// Task:
 //
-//Given an integer, , perform the following conditional actions:
-
-//If n is odd, print Weird
-//If n is even and in the inclusive range of 2 to 5, print Not Weird
-//If n is even and in the inclusive range of 6 to 20, print Weird
-//If n is even and greater than 20, print Not Weird
-
+//Write a Person class with an instance variable, age, and a constructor that
+// takes an integer,initialAge,as a parameter. The constructor must assign
+// initialAge to  after confirming the argument passed as  is not negative;
+// if a negative argument is passed as initialAge, the constructor should set
+// age to 0 and print Age is not valid, setting age to 0.. In addition, you must
+// write the following instance methods:
+// yearPasses() should increase the age instance variable by 1.
+//amIOld() should perform the following conditional actions:
+//If age < 13, print You are young..
+//If age >= 13  and age < 18 , print You are a teenager..
+//Otherwise, print You are old..
 
 //Input Format
 //
-//A single line containing a positive integer, .
+//The first line contains an integer, T (the number of test cases), and the T subsequent lines each contain an integer denoting the age of a Person instance.
 
 //Constraints
 //
-// 1 <= n && n <= 100
+// 1 <= T && T <= 4
+// -5 <= age <= 30
 
 //Output Format
 //
-//Print Weird if the number is weird; otherwise, print Not Weird.
+//If your methods are implemented correctly, each test case will print 2 or 3 lines (depending on whether or not a valid initialAge was passed to the constructor).
 
+class Person {
+  int initialAge;
 
-void findOutIfNumberIsWeird() {
+  Person(this.initialAge);
 
-  int number = int.tryParse(stdin.readLineSync());
+  amIOld() {}
 
-  bool isNumberWithinConstraints = ((number >= 1) && (number <= 100));
-
-  if(isNumberWithinConstraints){
-    // If number is not even
-    if(number % 2 != 0){
-      print('Weird');
-    }else{
-      // If number is in the inclusive range of 2 - 5
-      if((number >= 2) && (number <= 5)){
-        print('Not weird');
-      }else if((number >= 6) && (number <= 20)){ // If number is in the inclusive range of 2 - 5
-        print('Weird');
-      }else{ // If number is greater than 20
-        print('Not weird');
-      }
-    }
-  }else{
-    print('Number is not within constraints');
-  }
+  yearPasses() {}
 }
+
+void tellMeWhetherIAmOld() {}

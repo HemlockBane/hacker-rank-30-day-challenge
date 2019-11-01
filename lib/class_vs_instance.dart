@@ -1,5 +1,3 @@
-import 'dart:io';
-
 // Task:
 //
 //Write a Person class with an instance variable, age, and a constructor that
@@ -16,7 +14,8 @@ import 'dart:io';
 
 //Input Format
 //
-//The first line contains an integer, T (the number of test cases), and the T subsequent lines each contain an integer denoting the age of a Person instance.
+//The first line contains an integer, T (the number of test cases), and the T
+// subsequent lines each contain an integer denoting the age of a Person instance.
 
 //Constraints
 //
@@ -25,16 +24,51 @@ import 'dart:io';
 
 //Output Format
 //
-//If your methods are implemented correctly, each test case will print 2 or 3 lines (depending on whether or not a valid initialAge was passed to the constructor).
+//If your methods are implemented correctly, each test case will print 2 or 3 lines
+// (depending on whether or not a valid initialAge was passed to the constructor).
 
-class Person {
-  int initialAge;
+import 'dart:io';
 
-  Person(this.initialAge);
+void tellMeWhetherIAmOld() {
+  int numberOfTestCases = int.tryParse(stdin.readLineSync());
 
-  amIOld() {}
+  if (!(numberOfTestCases >= 1 && numberOfTestCases <= 4)) {
+    print('Test case must satisfy the condition');
+  }
 
-  yearPasses() {}
+  for (int i = 0; i < numberOfTestCases; i++) {
+    int age = int.tryParse(stdin.readLineSync());
+    Person person = Person(age);
+    person.amIOld();
+    for (int j = 0; j < 3; j++) {
+      person.yearPasses();
+    }
+    person.amIOld();
+    print('');
+  }
 }
 
-void tellMeWhetherIAmOld() {}
+class Person {
+  int age;
+
+  Person(int initialAge) {
+    if (initialAge < 0) {
+      age = 0;
+      print('Age is not valid, setting age to 0.');
+    } else {
+      age = initialAge;
+    }
+  }
+
+  void amIOld() {
+    if (age < 13) {
+      print('You are young.');
+    } else if (age >= 13 && age < 18) {
+      print('You are a teenager.');
+    } else {
+      print('You are old.');
+    }
+  }
+
+  void yearPasses() => age += 1;
+}
